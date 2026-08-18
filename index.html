@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102f4f">
+<meta name="description" content="Buku Supplier - catatan tagihan, pembelian, pengeluaran dan margin netto.">
+<link rel="manifest" href="manifest.json">
+<title>Buku Supplier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="brand-icon">📒</div>
+      <div>
+        <div class="brand-title">Buku Supplier</div>
+        <div class="brand-sub">Catatan keuangan harian</div>
+      </div>
+    </div>
+    <div class="date-pill" id="today"></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">RINGKASAN HARIAN</div>
+      <h1>Keuangan supplier<br><span>lebih rapi.</span></h1>
+      <p>Catat tagihan rumah makan, tagihan barang, dan pengeluaran dalam satu tempat.</p>
+    </div>
+    <div class="hero-mark">BS</div>
+  </section>
+
+  <section class="summary">
+    <div class="stat">
+      <div class="stat-icon">🧾</div>
+      <small>Total Tagihan</small>
+      <strong id="sales">Rp0</strong>
+    </div>
+    <div class="stat">
+      <div class="stat-icon">📦</div>
+      <small>Tagihan Barang</small>
+      <strong id="debt">Rp0</strong>
+    </div>
+    <div class="stat">
+      <div class="stat-icon">💸</div>
+      <small>Pengeluaran</small>
+      <strong id="expense">Rp0</strong>
+    </div>
+    <div class="net">
+      <div>
+        <small>SISA MARGIN NETTO</small>
+        <strong id="net">Rp0</strong>
+      </div>
+      <div class="net-icon">✓</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-title">
+      <div><div class="eyebrow">PELANGGAN</div><h2>Tagihan Rumah Makan</h2></div>
+      <span class="count">3 pelanggan</span>
+    </div>
+    <button class="customer" onclick="sales('Bebek Boedjang')">
+      <span class="customer-icon">🦆</span><span><b>Bebek Boedjang</b><small>Catat tagihan hari ini</small></span><span class="arrow">›</span>
+    </button>
+    <button class="customer" onclick="sales('Mie Ayam Bakso Muntul')">
+      <span class="customer-icon">🍜</span><span><b>Mie Ayam Bakso Muntul</b><small>Catat tagihan hari ini</small></span><span class="arrow">›</span>
+    </button>
+    <button class="customer" onclick="sales('Warung Nini')">
+      <span class="customer-icon">🍲</span><span><b>Warung Nini</b><small>Catat tagihan hari ini</small></span><span class="arrow">›</span>
+    </button>
+  </section>
+
+  <section class="card">
+    <div class="section-title">
+      <div><div class="eyebrow">KEUANGAN</div><h2>Catatan Pengeluaran</h2></div>
+    </div>
+    <div class="finance-grid">
+      <button class="action" onclick="debt()"><span>📦</span><b>Tagihan Barang</b><small>Barang yang harus dibayar</small></button>
+      <button class="action" onclick="expense()"><span>💸</span><b>Pengeluaran</b><small>Bensin, makan, dll.</small></button>
+    </div>
+    <button class="report-btn" onclick="report()">📊 Lihat Rekap Keuangan <span>›</span></button>
+  </section>
+
+  <section id="form" class="card hide"></section>
+  <section id="report" class="card hide"></section>
+</main>
+
+<footer>Buku Supplier • Data tersimpan di perangkat ini</footer>
+<script src="app.js"></script>
+</body>
+</html>
