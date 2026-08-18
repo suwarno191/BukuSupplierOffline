@@ -1,0 +1,15 @@
+{
+  "name": "Buku Supplier",
+  "short_name": "Buku Supplier",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fa",
+  "theme_color": "#102f4f",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
